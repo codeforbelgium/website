@@ -2,6 +2,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background: rgb(167, 167, 187);
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -43,7 +44,9 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  min-height: 650px;
   text-align: center;
+  background: rgb(167, 167, 187); //#E4EFF5;
   border-bottom: 1px solid #e5e5e5;
 }
 .jumbotron .btn {
@@ -76,4 +79,31 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.register{
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  left: 0;
+}
+
+.red{
+  color: red;
+}
+
+.black{
+  color: black;
+}
+
+.yellow{
+  color: yellow;
+}
+
+.brand{
+  font-size: 1.5em;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.5%;
 }
