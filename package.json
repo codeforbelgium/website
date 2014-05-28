@@ -1,7 +1,13 @@
 {
   "name": "website",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.3.1",
+    "mongoose": "^3.8.11",
+    "querystring": "^0.2.0",
+    "request": "^2.36.0",
+    "underscore": "^1.6.0"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.4.0",
