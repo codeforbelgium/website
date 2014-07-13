@@ -9,7 +9,7 @@ var _ = require('underscore');
 app.use(express.static(path.join(__dirname, '../app')));
 
 var config = {
-	client_id: '11554cd796805d8cdc48'
+	client_id: 'fcc456d94150d1d639ca'
 }
 
 
@@ -49,8 +49,8 @@ function createUser(code, req, res) {
   request.post({
     url: accessTokenUrl,
     qs: {
-      client_id: '11554cd796805d8cdc48',
-      client_secret: '75e582a6d82f60050654dc1790995609adac2ba0',
+      client_id: 'fcc456d94150d1d639ca',
+      client_secret: '9c66cbb51785a296317fe6af31e7dcac46f06ff5',
       code: code
     },
     headers: { 'Accept': 'application/json' }
@@ -149,7 +149,7 @@ var saveUser = function(user, req, res) {
 app.get('/gitAuth', function(req, res) {
 	var config = qs.stringify({
     	scope: 'user:email',
-    	client_id: '11554cd796805d8cdc48'
+    	client_id: 'fcc456d94150d1d639ca'
   	});
 
 	res.redirect('https://github.com/login/oauth/authorize/?'+ config);

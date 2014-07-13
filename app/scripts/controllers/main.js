@@ -7,9 +7,7 @@
 
 	    	var brand = $('.register');
 
-	    	debugger;
-
-	    	TweenLite.to(brand, 1, {css:{right:"20px"}});
+	    	//TweenLite.to(brand, 1, {css:{right:"20px"}});
 	    	
 	    }
   	});
