@@ -16,7 +16,7 @@ var config = {
 // Mongoose configuration
 var mongoose = require('mongoose');
 // 'mongodb://localhost/codeforbelgium'
-var dbConnection = 'mongodb://davyengone:getbetter2013@ds037597.mongolab.com:37597/codeforbelgium'
+var dbConnection = 'mongodb://philos:getbetter2013@ds037597.mongolab.com:37597/codeforbelgium'
 mongoose.connect(dbConnection);
 
 var User = mongoose.model('User', {
