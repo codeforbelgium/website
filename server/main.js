@@ -8,11 +8,6 @@ var _ = require('underscore');
 
 app.use(express.static(path.join(__dirname, '../app')));
 
-var config = {
-	client_id: 'fcc456d94150d1d639ca'
-}
-
-
 // Mongoose configuration
 var mongoose = require('mongoose');
 // 'mongodb://localhost/codeforbelgium'
@@ -149,10 +144,20 @@ var saveUser = function(user, req, res) {
 };
 
 app.get('/gitAuth', function(req, res) {
+  var host = req.get('host'), 
+      client_id = 'fcc456d94150d1d639ca'; // codeforbelgium.org
+
+  if (host.indexOf('localhost') >= 0) { 
+    client_id = '894fcc734c3e8da27751' // localhost:3000
+  }
+  else if(host.indexOf('codefor.be') >= 0){
+    client_id = '8ec2d2e6f5df00ba8daf' // codefor.be
+  }
+  
 	var config = qs.stringify({
     	scope: 'user:email',
-    	client_id: 'fcc456d94150d1d639ca'
-  	});
+    	client_id: client_id
+  });
 
 	res.redirect('https://github.com/login/oauth/authorize/?'+ config);
 });
